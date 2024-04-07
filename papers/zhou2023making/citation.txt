@@ -1,0 +1,8 @@
+@misc{zhou2023making,
+      title={Making Harmful Behaviors Unlearnable for Large Language Models},
+      author={Xin Zhou and Yi Lu and Ruotian Ma and Tao Gui and Qi Zhang and Xuanjing Huang},
+      year={2023},
+      eprint={2311.02105},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}clear
