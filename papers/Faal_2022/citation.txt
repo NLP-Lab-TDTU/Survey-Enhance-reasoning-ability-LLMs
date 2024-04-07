@@ -1,0 +1,12 @@
+@article{Faal_2022,
+   title={Reward modeling for mitigating toxicity in transformer-based language models},
+   volume={53},
+   ISSN={1573-7497},
+   url={http://dx.doi.org/10.1007/s10489-022-03944-z},
+   DOI={10.1007/s10489-022-03944-z},
+   number={7},
+   journal={Applied Intelligence},
+   publisher={Springer Science and Business Media LLC},
+   author={Faal, Farshid and Schmitt, Ketra and Yu, Jia Yuan},
+   year={2022},
+   month=jul, pages={8421–8435} }
