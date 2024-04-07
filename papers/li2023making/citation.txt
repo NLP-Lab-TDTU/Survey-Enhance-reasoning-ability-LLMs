@@ -1,0 +1,8 @@
+@misc{li2023making,
+      title={Making Large Language Models Better Reasoners with Step-Aware Verifier}, 
+      author={Yifei Li and Zeqi Lin and Shizhuo Zhang and Qiang Fu and Bei Chen and Jian-Guang Lou and Weizhu Chen},
+      year={2023},
+      eprint={2206.02336},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
