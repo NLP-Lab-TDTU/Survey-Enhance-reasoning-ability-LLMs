@@ -1,0 +1,8 @@
+@misc{liu2023improving,
+      title={Improving Large Language Model Fine-tuning for Solving Math Problems}, 
+      author={Yixin Liu and Avi Singh and C. Daniel Freeman and John D. Co-Reyes and Peter J. Liu},
+      year={2023},
+      eprint={2310.10047},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
