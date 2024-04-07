@@ -1,0 +1,8 @@
+@misc{gao2024efficient,
+      title={Efficient Tool Use with Chain-of-Abstraction Reasoning}, 
+      author={Silin Gao and Jane Dwivedi-Yu and Ping Yu and Xiaoqing Ellen Tan and Ramakanth Pasunuru and Olga Golovneva and Koustuv Sinha and Asli Celikyilmaz and Antoine Bosselut and Tianlu Wang},
+      year={2024},
+      eprint={2401.17464},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}

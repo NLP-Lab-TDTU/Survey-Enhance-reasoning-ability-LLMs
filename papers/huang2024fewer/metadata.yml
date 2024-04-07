@@ -1,0 +1,5 @@
+# finetune a model to reduce tokens, then add more CoT examples to prompt
+type: tool
+tags:
+  - CoT
+  - Chain-of-Thought
