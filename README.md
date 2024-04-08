@@ -2,6 +2,7 @@
 
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](papers/wei2023chainofthought/2201.11903.pdf)
 - [Yi: Open Foundation Models by 01.AI](papers/ai2024yi/2403.04652.pdf)
+- [Generative Representational Instruction Tuning](papers/muennighoff2024generative/2402.09906.pdf)
 - [Fast Model Editing at Scale](papers/mitchell2022fast/2110.11309.pdf)
 - [GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection](papers/zhao2024galore/2403.03507.pdf)
 - [sDPO: Don't Use Your Data All at Once](papers/kim2024sdpo/2403.19270.pdf)
