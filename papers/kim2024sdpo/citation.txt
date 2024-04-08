@@ -1,0 +1,8 @@
+@misc{kim2024sdpo,
+      title={sDPO: Don't Use Your Data All at Once}, 
+      author={Dahyun Kim and Yungi Kim and Wonho Song and Hyeonwoo Kim and Yunsu Kim and Sanghoon Kim and Chanjun Park},
+      year={2024},
+      eprint={2403.19270},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}

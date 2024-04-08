@@ -1,0 +1,8 @@
+@misc{wu2024reft,
+      title={ReFT: Representation Finetuning for Language Models}, 
+      author={Zhengxuan Wu and Aryaman Arora and Zheng Wang and Atticus Geiger and Dan Jurafsky and Christopher D. Manning and Christopher Potts},
+      year={2024},
+      eprint={2404.03592},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
