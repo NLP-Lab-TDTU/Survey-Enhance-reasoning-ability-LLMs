@@ -1,4 +1,4 @@
-type: prompting
+type: "Data"
 tags:
-    fewshot
-    prompting
+    - "Chain of thought"
+    - "Prompting"
