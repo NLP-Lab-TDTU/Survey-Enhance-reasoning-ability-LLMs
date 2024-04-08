@@ -1,0 +1,8 @@
+@misc{jiang2024instructiontuned,
+      title={Instruction-tuned Language Models are Better Knowledge Learners},
+      author={Zhengbao Jiang and Zhiqing Sun and Weijia Shi and Pedro Rodriguez and Chunting Zhou and Graham Neubig and Xi Victoria Lin and Wen-tau Yih and Srinivasan Iyer},
+      year={2024},
+      eprint={2402.12847},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}

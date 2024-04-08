@@ -1,0 +1,8 @@
+@misc{zhang2024raft,
+      title={RAFT: Adapting Language Model to Domain Specific RAG},
+      author={Tianjun Zhang and Shishir G. Patil and Naman Jain and Sheng Shen and Matei Zaharia and Ion Stoica and Joseph E. Gonzalez},
+      year={2024},
+      eprint={2403.10131},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}

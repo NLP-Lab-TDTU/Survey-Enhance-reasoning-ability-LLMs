@@ -1,0 +1,8 @@
+@misc{zhang2024recurrent,
+      title={Recurrent Drafter for Fast Speculative Decoding in Large Language Models},
+      author={Aonan Zhang and Chong Wang and Yi Wang and Xuanyu Zhang and Yunfei Cheng},
+      year={2024},
+      eprint={2403.09919},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}

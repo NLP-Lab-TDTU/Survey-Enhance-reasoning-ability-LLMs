@@ -1,0 +1,8 @@
+@misc{ibrahim2024simple,
+      title={Simple and Scalable Strategies to Continually Pre-train Large Language Models},
+      author={Adam Ibrahim and Benjamin Thérien and Kshitij Gupta and Mats L. Richter and Quentin Anthony and Timothée Lesort and Eugene Belilovsky and Irina Rish},
+      year={2024},
+      eprint={2403.08763},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}

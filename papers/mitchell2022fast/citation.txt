@@ -1,0 +1,8 @@
+@misc{mitchell2022fast,
+      title={Fast Model Editing at Scale},
+      author={Eric Mitchell and Charles Lin and Antoine Bosselut and Chelsea Finn and Christopher D. Manning},
+      year={2022},
+      eprint={2110.11309},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
