@@ -11,6 +11,15 @@ def extract_title(content):
         return None
 
 
+def extract_authors(content):
+    pattern = r"(?P<field>author)={(?P<value>.*)}"
+    match = re.search(pattern, content)
+    if match:
+        return match.group('value')
+    else:
+        return None
+
+
 def get_pdf_path(citation_file):
     parent_dir = os.path.dirname(citation_file)
     pdf_files = glob.glob(f'{parent_dir}/*.pdf')
@@ -28,12 +37,15 @@ def main():
         with open(file, 'r') as f:
             content = f.read()
             title = extract_title(content)
+            authors = extract_authors(content)
             pdf_path = get_pdf_path(file)
             summary = open(os.path.dirname(file) + '/summary.txt').read()
             if title and pdf_path and summary:
                 writer.write(f'## {title}\n\n')
+                writer.write(f'Authors: {authors}\n\n')
                 writer.write(f'[Link to PDF]({pdf_path})\n\n')
                 writer.write(f'{summary}\n\n')
+                writer.write(f'Citation:\n```\n{content}\n```\n\n')
 
     writer.close()
 
