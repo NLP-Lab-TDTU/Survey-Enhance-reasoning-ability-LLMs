@@ -1,0 +1,10 @@
+ * Training Large Language Models (LLMs) is memory-intensive due to the growing size of weights and optimizer states.
+* Common memory-reduction approaches like low-rank adaptation (LoRA) add a trainable low-rank matrix to the frozen pre-trained weight in each layer, reducing trainable parameters and optimizer states.
+* However, LoRA and similar methods typically underperform training with full-rank weights in both pre-training and fine-tuning stages.
+* The authors propose Gradient Low-Rank Projection (GaLore), a memory-efficient training strategy that allows full-parameter learning while reducing memory usage.
+* GaLore reduces memory usage by up to 65.5% in optimizer states and maintains performance for pre-training on LLaMA 1B and 7B architectures with the C4 dataset.
+* The 8-bit GaLore further reduces optimizer memory by up to 82.5% and total training memory by 63.3%, compared to a BF16 baseline.
+* The authors demonstrate the feasibility of pre-training a 7B model on consumer GPUs with 24GB memory without model parallel, checkpointing, or offloading strategies.
+* GaLore is a PyTorch-like algorithm that projects gradients to a compact space, updates them, and then projects them back to the original space.
+* The authors show that GaLore outperforms other memory-reduction techniques like gradient checkpointing and activation offloading.
+* GaLore is a promising approach for memory-efficient LLM training, allowing for full-parameter learning and reducing memory usage.

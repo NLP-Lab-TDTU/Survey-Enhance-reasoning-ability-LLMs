@@ -1,0 +1,8 @@
+ * The paper introduces OpenMathInstruct-1, a dataset of 1.8 million math problem-solution pairs generated using the open-source Mixtral model.
+* The dataset is used to train a model called OpenMath-CodeLlama-70B, which achieves competitive scores on the GSM8K and MATH benchmarks.
+* The authors argue that the use of open-source models for generating math instruction tuning datasets has been limited due to the wide gap in mathematical skills between closed-source and open-source LLMs.
+* The paper aims to address this gap by using a novel prompting strategy and scaling techniques to generate high-quality synthetic data.
+* The authors compare the performance of Mixtral with GPT-4, currently one of the best closed-source LLMs for mathematical reasoning, and find that Mixtral performs well but still lags behind GPT-4.
+* The OpenMathInstruct-1 dataset, code, and models are released under a commercially permissive license.
+* The paper highlights the limitations of using proprietary models like GPT-4 for model development, including legal restraints, cost, and lack of reproducibility.
+* The authors argue that open-source models like Mixtral can provide a viable alternative for developing mathematical reasoning models, with the potential to overcome these limitations.

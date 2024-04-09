@@ -29,9 +29,11 @@ def main():
             content = f.read()
             title = extract_title(content)
             pdf_path = get_pdf_path(file)
-
-            if title and pdf_path:
-                writer.write(f'- [{title}]({pdf_path})\n')
+            summary = open(os.path.dirname(file) + '/summary.txt').read()
+            if title and pdf_path and summary:
+                writer.write(f'## {title}\n\n')
+                writer.write(f'![pdf]({pdf_path})\n\n')
+                writer.write(f'{summary}\n\n')
 
     writer.close()
 

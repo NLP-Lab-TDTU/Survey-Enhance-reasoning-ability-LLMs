@@ -1,0 +1,9 @@
+ * The paper proposes a method called "chain-of-thought" prompting to improve the complex reasoning abilities of large language models.
+* The method involves providing a few chain of thought demonstrations as exemplars in prompting.
+* Experiments are conducted on three large language models, and the results show that chain-of-thought prompting improves performance on a range of arithmetic, commonsense, and symbolic reasoning tasks.
+* The empirical gains can be significant, with a PaLM 540B model prompted with just eight chain-of-thought exemplars achieving state-of-the-art accuracy on the GSM8K benchmark of math word problems.
+* The paper provides an example of how chain-of-thought prompting works, with the model first generating intermediate reasoning steps before arriving at the final answer.
+* The authors suggest that the reasoning abilities emerge naturally in sufficiently large language models, and that the chain-of-thought method is a simple and effective way to elicit this reasoning.
+* The paper also includes a discussion of the limitations of the method and potential areas for future research.
+* The findings of the paper have implications for the use of large language models in a variety of applications, including education, customer service, and decision-making.
+* The paper was presented at the 36th Conference on Neural Information Processing Systems (NeurIPS 2022).

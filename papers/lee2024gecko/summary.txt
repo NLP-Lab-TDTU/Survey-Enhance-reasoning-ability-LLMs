@@ -1,0 +1,10 @@
+ * Gecko is a new text embedding model that is compact and versatile, achieving strong retrieval performance.
+* It distills knowledge from large language models (LLMs) into a retriever using a two-step distillation process.
+* The first step generates diverse, synthetic paired data using an LLM, and the second step refines the data quality by retrieving a set of candidate passages for each query and relabeling the positive and hard negative passages using the same LLM.
+* Gecko outperforms existing entries with 768 embedding size on the Massive Text Embedding Benchmark (MTEB) with 256 embedding dimensions.
+* Gecko with 768 embedding dimensions competes with 7x larger models and 5x higher dimensional embeddings.
+* Gecko's approach leverages insights from knowledge distillation to create a two-step LLM-powered embedding model.
+* It starts with a large corpus of (unlabeled) passages, uses a few-shot prompted LLM to generate a relevant task and query for each passage, and embeds the concatenated task and query using a pretrained embedding model.
+* It then reranks the passages using an LLM to obtain positive and negative passages based on the LLM scores.
+* The reranking step is key to enhance the quality as the best passage to answer the generated query often differs from the original source passage.
+* Using Gecko's LLM-based dataset, FRet, alone can lead to significant improvement, setting a strong baseline as a zero-shot embedding model on MTEB.

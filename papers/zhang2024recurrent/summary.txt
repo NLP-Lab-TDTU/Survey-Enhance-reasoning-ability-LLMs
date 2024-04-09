@@ -1,0 +1,9 @@
+ * The paper proposes an improved approach for speculative decoding to enhance the efficiency of serving large language models (LLMs).
+* The approach combines the strengths of the classic two-model speculative decoding and the single-model approach, Medusa.
+* It uses a single-model strategy with a lightweight draft head that has a recurrent dependency design, similar to the small draft model in classic speculative decoding.
+* The recurrent dependency allows for swift filtering of undesired candidates using beam search, avoiding the need for a data-dependent tree attention structure during inference as in Medusa.
+* The proposed method is empirically demonstrated to be effective on several popular open-source LLMs, with a comprehensive analysis of trade-offs involved.
+* LLMs are large models with billions of parameters, using auto-regressive methods for token-by-token responses, which can be slow due to memory bandwidth constraints and large model size.
+* Speculative decoding has emerged as a promising strategy to accelerate LLM inference, using a smaller draft model to generate preliminary candidate tokens and a larger target model for verification.
+* The single-model approach, as in Medusa, is preferred for easier integration into existing LLM serving systems.
+* The proposed method simplifies the single-model design while avoiding the complexities of the full transformer architecture and the need for a data-dependent tree attention structure.

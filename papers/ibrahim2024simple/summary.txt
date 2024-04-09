@@ -1,0 +1,6 @@
+ * Large language models (LLMs) are typically pre-trained on billions of tokens and then re-trained from scratch when new data becomes available.
+* Continual pre-training of LLMs can save significant compute compared to re-training, but it can result in degraded performance on previous data or poor adaptation to new data due to distribution shift.
+* The authors propose a simple and scalable combination of learning rate (LR) re-warming, LR re-decaying, and replay of previous data to match the performance of fully re-training from scratch on all available data.
+* The proposed method is shown to match the re-training baseline for a 405M parameter model on two commonly used LLM pre-training datasets (English→English) and a stronger distribution shift (English→German).
+* The method also matches the re-training baseline for a 10B parameter LLM on a weak but realistic distribution shift (English→English).
+* The authors propose alternatives to the cosine learning rate schedule to help circumvent forgetting induced by LR re-warming and that are not bound to a fixed token budget.

@@ -1,0 +1,10 @@
+ * Representation Finetuning (ReFT) is a new approach to adapting pretrained language models (LMs) to new tasks or domains, which involves learning task-specific interventions on hidden representations rather than updating model weights.
+* The authors propose a specific instance of the ReFT family, called Low-rank Linear Subspace ReFT (LoReFT), which is a drop-in replacement for existing parameter-efficient finetuning (PEFT) methods and learns interventions that are more parameter-efficient than prior state-of-the-art PEFTs.
+* LoReFT is evaluated on eight commonsense reasoning tasks, four arithmetic reasoning tasks, Alpaca-Eval v1.0, and GLUE, and is shown to deliver the best balance of efficiency and performance, outperforming state-of-the-art PEFTs in most cases.
+* The authors release a generic ReFT training library publicly at <https://github.com/stanfordnlp/pyreft>.
+* Current state-of-the-art PEFTs modify model weights, but interpretability work has shown that representations encode rich semantic information, suggesting that editing representations might be a more powerful alternative to weight updates.
+* ReFT methods operate on a frozen base model and learn task-specific interventions on hidden representations, reducing memory usage and training time while maintaining similar performance to full finetuning in many practical settings.
+* Adapters, a common family of PEFTs, learn an edit that can be added to a subset of model weights or an additional set of weights that operate alongside the frozen base model.
+* Recent adapters such as LoRA and DoRA use low-rank approximations in place of full weight matrices during adapter training, reducing the number of trainable parameters in learned weight updates.
+* QLoRA further shows that full-precision adapters can be trained on top of reduced-precision models without sacrificing performance.
+* Adapters are generally more efficient and effective than methods that introduce new model components, like prefix-tuning.

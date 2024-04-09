@@ -1,0 +1,10 @@
+ * The Yi model family is a series of language and multimodal models with strong multi-dimensional capabilities.
+* The models are based on 6B and 34B pretrained language models, and are extended to chat models, 200K long context models, depth-upscaled models, and vision-language models.
+* The base models perform well on a range of benchmarks like MMLU, and the finetuned chat models have high human preference rates on evaluation platforms like AlpacaEval and Chatbot Arena.
+* The performance of Yi models is primarily attributed to data quality resulting from data-engineering efforts.
+* For pretraining, a cascaded data deduplication and quality filtering pipeline is used to construct 3.1 trillion tokens of English and Chinese corpora.
+* For finetuning, a small scale (less than 10K) instruction dataset is polished over multiple iterations, with every instance verified directly by machine learning engineers.
+* For vision-language, a vision transformer encoder is combined with the chat language model, and the model is trained to align visual representations to the semantic space of the language model.
+* The context length is extended to 200K through lightweight continual pretraining, demonstrating strong needle-in-a-haystack retrieval performance.
+* Extending the depth of the pretrained checkpoint through continual pretraining further improves performance.
+* The authors believe that continuing to scale up model parameters with optimized data will lead to even stronger frontier models.

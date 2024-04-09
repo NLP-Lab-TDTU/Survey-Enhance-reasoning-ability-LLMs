@@ -1,0 +1,9 @@
+ * The paper proposes sDPO, an extension of Direct Preference Optimization (DPO) for aligning large language models (LLMs) with human preferences.
+* DPO involves curating preference datasets using human or strong AI judgement to select chosen and rejected responses to questions, and training LLMs by comparing log probabilities of chosen versus rejected answers.
+* The authors argue that the reference model used in DPO, which acts as a lower bound, is usually set as the base SFT model, which is a weaker alternative with potentially misaligned preferences.
+* The proposed sDPO trains the final model to be more performant by using the aligned model in the previous step as the reference model for the current step, resulting in a more aligned reference model.
+* The authors demonstrate that sDPO facilitates the use of more precisely aligned reference models within the DPO training framework.
+* The sDPO trained models outperform other popular LLMs with more parameters, as shown in Table 1 with H4 scores for Mistral-7B-OpenOrca and OpenHermes-2.5-Mistral-7B with different reference models.
+* The sDPO trained models perform better than the base SFT model, even when the base SFT model is already aligned, indicating that sDPO can improve the alignment of already aligned models.
+* The authors also show that sDPO can be used with different types of reference models, including open source models and models trained with different techniques.
+* The paper concludes that sDPO is a simple and effective method for aligning LLMs with human preferences, and can be used with different types of reference models.

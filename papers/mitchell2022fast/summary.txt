@@ -1,0 +1,7 @@
+ * The paper proposes a method for editing large pre-trained models to correct inaccurate outputs or update outdated information.
+* The proposed method, called Model Editor Networks with Gradient Decomposition (MEND), uses a single desired input-output pair to make fast, local edits to a pre-trained model's behavior.
+* MEND learns to transform the gradient obtained by standard fine-tuning using a low-rank decomposition of the gradient to make the parameterization of this transformation tractable.
+* MEND can be trained on a single GPU in less than a day even for 10 billion+ parameter models and enables rapid application of new edits to the pre-trained model.
+* The authors compare MEND to other editing algorithms and find that it is the only approach that effectively edits the behavior of models with more than 10 billion parameters.
+* The authors test MEND on T5, GPT, BERT, and BART models and find that it is able to make targeted edits while preserving the model's performance on unrelated inputs.
+* The code and data for MEND are available at <https://sites.google.com/view/mend-editing>.
