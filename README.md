@@ -16,13 +16,13 @@ Authors: Jason Wei and Xuezhi Wang and Dale Schuurmans and Maarten Bosma and Bri
 Citation:
 ```
 @misc{wei2023chainofthought,
-      title={Chain-of-Thought Prompting Elicits Reasoning in Large Language Models}, 
+      title={Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
       author={Jason Wei and Xuezhi Wang and Dale Schuurmans and Maarten Bosma and Brian Ichter and Fei Xia and Ed Chi and Quoc Le and Denny Zhou},
       year={2023},
       eprint={2201.11903},
       archivePrefix={arXiv},
       primaryClass={cs.CL}
-}X
+}
 
 ```
 
