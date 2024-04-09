@@ -83,6 +83,16 @@
 * Gecko outperforms existing entries with 768 embedding size and competes with 7x larger models and 5x higher dimensional embeddings.
 * The authors show that using their LLM-based dataset, FRet, alone can lead to significant improvement, setting a strong baseline as a zero-shot embedding model on MTEB.
 
+## Direct Preference Optimization: Your Language Model is Secretly a Reward Model
+
+[Link to PDF](papers/rafailov2023direct/2305.18290.pdf)
+
+ * Large language models (LMs) trained on extensive datasets exhibit impressive capabilities but may also replicate undesirable behaviors from their human trainers.
+* Current methods for aligning LMs with human preferences typically involve reinforcement learning (RL) to fine-tune the models, but these methods can be complex, unstable, and computationally expensive.
+* The authors propose Direct Preference Optimization (DPO), a new parameterization of the reward model in RLHF that allows for closed-form extraction of the optimal policy, simplifying the process to a simple classification loss.
+* DPO is stable, efficient, and eliminates the need for sampling from the LM during fine-tuning or hyperparameter tuning.
+* Experiments show that DPO can fine-tune LMs to align with human preferences as well as or better than existing methods, improving control over sentiment in generations and matching or improving response quality in summarization and single-turn dialogue.
+
 ## Advancing LLM Reasoning Generalists with Preference Trees
 
 [Link to PDF](papers/yuan2024advancing/2404.02078.pdf)

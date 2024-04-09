@@ -1,0 +1,8 @@
+@misc{rafailov2023direct,
+      title={Direct Preference Optimization: Your Language Model is Secretly a Reward Model},
+      author={Rafael Rafailov and Archit Sharma and Eric Mitchell and Stefano Ermon and Christopher D. Manning and Chelsea Finn},
+      year={2023},
+      eprint={2305.18290},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
