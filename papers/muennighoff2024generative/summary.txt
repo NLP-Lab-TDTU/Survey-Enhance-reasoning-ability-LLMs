@@ -1,9 +1,6 @@
- * The paper proposes a new method called Generative Representational Instruction Tuning (GRIT) that enables a large language model to handle both generative and embedding tasks by distinguishing between them through instructions.
+ * The paper introduces a new method called Generative Representational Instruction Tuning (GRIT) that enables a large language model to handle both generative and embedding tasks by distinguishing between them through instructions.
 * The resulting GRITLM 7B model sets a new state of the art on the Massive Text Embedding Benchmark (MTEB) and outperforms all models up to its size on a range of generative tasks.
-* By scaling up further, GRITLM 8X7B outperforms all open generative language models that were tried while still being among the best embedding models.
+* GRITLM 8X7B outperforms all open generative language models while still being among the best embedding models.
 * GRIT matches training on only generative or embedding data, thus unifying both at no performance loss.
-* The unification via GRIT speeds up Retrieval-Augmented Generation (RAG) by > 60% for long documents, by no longer requiring separate retrieval and generation models.
-* The models, code, and other materials are freely available at <https://github.com/ContextualAI/gritlm>.
-* The paper includes a figure that compares the performance of various models on text representation (embedding) and generation tasks, showing that GRITLM is the first model to perform best-in-class at both types of tasks simultaneously.
-* The paper is a preprint and is currently under review.
-* The paper's arXiv ID is 2402.09906v1 [cs.CL], and it was published on 15 Feb 2024.
+* The unification via GRIT speeds up Retrieval-Augmented Generation (RAG) by > 60% for long documents.
+* The models, code, and other materials are available at <https://github.com/ContextualAI/gritlm>.

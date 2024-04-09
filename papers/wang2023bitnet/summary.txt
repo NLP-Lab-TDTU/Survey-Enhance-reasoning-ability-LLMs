@@ -1,0 +1,6 @@
+ * The paper introduces BitNet, a scalable and stable 1-bit Transformer architecture for large language models.
+* BitNet uses a drop-in replacement called BitLinear for the nn.Linear layer to train 1-bit weights from scratch.
+* Experimental results show that BitNet achieves competitive performance while reducing memory footprint and energy consumption, compared to state-of-the-art 8-bit quantization methods and FP16 Transformer baselines.
+* BitNet exhibits a scaling law similar to full-precision Transformers, suggesting its potential for effective scaling to larger language models while maintaining efficiency and performance benefits.
+* BitNet trains 1-bit Transformers from scratch, significantly outperforming state-of-the-art quantization methods and achieving energy-efficient results.
+* The cost savings of BitNet become more significant as the model size scales up, while still achieving competitive performance with models trained with FP16.

@@ -1,9 +1,5 @@
  * The paper introduces InternLM2, an open-source Large Language Model (LLM) that outperforms previous models in comprehensive evaluations across 6 dimensions and 30 benchmarks.
-* InternLM2 is trained on diverse data types, including text, code, and long-context data, and efficiently captures long-term dependencies.
-* The model is initially trained on 4k tokens before advancing to 32k tokens in pre-training and fine-tuning stages, exhibiting remarkable performance on the 200k "Needle-in-a-Haystack" test.
-* InternLM2 is aligned using Supervised Fine-Tuning (SFT) and a novel Conditional Online Reinforcement Learning from Human Feedback (COOL RLHF) strategy that addresses conflicting human preferences and reward hacking.
-* The authors release InternLM2 models in different training stages and model sizes to provide the community with insights into the model's evolution.
-* The paper aims to replicate the advancements of closed-source LLMs like ChatGPT and GPT-4 in open-source models.
-* The pre-training process of InternLM2 is detailed, highlighting the preparation of diverse data types and the use of innovative pre-training and optimization techniques.
-* The model is evaluated on long-context modeling and open-ended subjective evaluations, showing superior performance compared to previous models.
-* The authors address the challenges of replicating advancements in open-source models and aim to provide a more transparent and accessible approach to LLM development.
+* InternLM2 is trained using innovative pre-training and optimization techniques, with a meticulous pre-training process that includes the preparation of diverse data types such as text, code, and long-context data.
+* The model efficiently captures long-term dependencies, initially trained on 4k tokens before advancing to 32k tokens in pre-training and fine-tuning stages, exhibiting remarkable performance on the 200k "Needle-in-a-Haystack" test.
+* InternLM2 is further aligned using Supervised Fine-Tuning (SFT) and a novel Conditional Online Reinforcement Learning from Human Feedback (COOL RLHF) strategy that addresses conflicting human preferences and reward hacking.
+* The authors release InternLM2 models in different training stages and model sizes, providing the community with insights into the model’s evolution.

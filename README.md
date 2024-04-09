@@ -2,231 +2,204 @@
 
 ## Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
 
-![pdf](papers/wei2023chainofthought/2201.11903.pdf)
+[Link to PDF](papers/wei2023chainofthought/2201.11903.pdf)
 
  * The paper proposes a method called "chain-of-thought" prompting to improve the complex reasoning abilities of large language models.
-* The method involves providing a few chain of thought demonstrations as exemplars in prompting.
-* Experiments are conducted on three large language models, and the results show that chain-of-thought prompting improves performance on a range of arithmetic, commonsense, and symbolic reasoning tasks.
-* The empirical gains can be significant, with a PaLM 540B model prompted with just eight chain-of-thought exemplars achieving state-of-the-art accuracy on the GSM8K benchmark of math word problems.
-* The paper provides an example of how chain-of-thought prompting works, with the model first generating intermediate reasoning steps before arriving at the final answer.
-* The authors suggest that the reasoning abilities emerge naturally in sufficiently large language models, and that the chain-of-thought method is a simple and effective way to elicit this reasoning.
-* The paper also includes a discussion of the limitations of the method and potential areas for future research.
-* The findings of the paper have implications for the use of large language models in a variety of applications, including education, customer service, and decision-making.
-* The paper was presented at the 36th Conference on Neural Information Processing Systems (NeurIPS 2022).
+* This method involves providing a few chain of thought demonstrations as exemplars in prompting, which leads to the emergence of reasoning abilities in the models.
+* The authors conduct experiments on three large language models and show that chain-of-thought prompting improves performance on a range of arithmetic, commonsense, and symbolic reasoning tasks.
+* The empirical gains from this method can be significant, as demonstrated by a PaLM 540B model achieving state-of-the-art accuracy on the GSM8K benchmark of math word problems.
+* The paper also provides examples of the chain-of-thought reasoning process, highlighting how the models break down complex problems into intermediate reasoning steps.
+* The authors suggest that this method could be useful for a wide range of applications, including decision-making, tutoring, and explanation generation.
 
 ## Yi: Open Foundation Models by 01.AI
 
-![pdf](papers/ai2024yi/2403.04652.pdf)
+[Link to PDF](papers/ai2024yi/2403.04652.pdf)
 
  * The Yi model family is a series of language and multimodal models with strong multi-dimensional capabilities.
 * The models are based on 6B and 34B pretrained language models, and are extended to chat models, 200K long context models, depth-upscaled models, and vision-language models.
-* The base models perform well on a range of benchmarks like MMLU, and the finetuned chat models have high human preference rates on evaluation platforms like AlpacaEval and Chatbot Arena.
-* The performance of Yi models is primarily attributed to data quality resulting from data-engineering efforts.
-* For pretraining, a cascaded data deduplication and quality filtering pipeline is used to construct 3.1 trillion tokens of English and Chinese corpora.
-* For finetuning, a small scale (less than 10K) instruction dataset is polished over multiple iterations, with every instance verified directly by machine learning engineers.
-* For vision-language, a vision transformer encoder is combined with the chat language model, and the model is trained to align visual representations to the semantic space of the language model.
-* The context length is extended to 200K through lightweight continual pretraining, demonstrating strong needle-in-a-haystack retrieval performance.
-* Extending the depth of the pretrained checkpoint through continual pretraining further improves performance.
-* The authors believe that continuing to scale up model parameters with optimized data will lead to even stronger frontier models.
+* The base models perform well on a range of benchmarks, and the finetuned chat models have a high human preference rate on evaluation platforms.
+* The performance of the Yi models is attributed to data quality resulting from data-engineering efforts, including a cascaded data deduplication and quality filtering pipeline for pretraining and manual verification of a small-scale instruction dataset for finetuning.
+* The vision-language models combine a chat language model with a vision transformer encoder and are trained to align visual representations to the semantic space of the language model.
+* The context length is extended to 200K through lightweight continual pretraining, and the performance is further improved by extending the depth of the pretrained checkpoint through continual pretraining.
 
 ## Generative Representational Instruction Tuning
 
-![pdf](papers/muennighoff2024generative/2402.09906.pdf)
+[Link to PDF](papers/muennighoff2024generative/2402.09906.pdf)
 
- * The paper proposes a new method called Generative Representational Instruction Tuning (GRIT) that enables a large language model to handle both generative and embedding tasks by distinguishing between them through instructions.
+ * The paper introduces a new method called Generative Representational Instruction Tuning (GRIT) that enables a large language model to handle both generative and embedding tasks by distinguishing between them through instructions.
 * The resulting GRITLM 7B model sets a new state of the art on the Massive Text Embedding Benchmark (MTEB) and outperforms all models up to its size on a range of generative tasks.
-* By scaling up further, GRITLM 8X7B outperforms all open generative language models that were tried while still being among the best embedding models.
+* GRITLM 8X7B outperforms all open generative language models while still being among the best embedding models.
 * GRIT matches training on only generative or embedding data, thus unifying both at no performance loss.
-* The unification via GRIT speeds up Retrieval-Augmented Generation (RAG) by > 60% for long documents, by no longer requiring separate retrieval and generation models.
-* The models, code, and other materials are freely available at <https://github.com/ContextualAI/gritlm>.
-* The paper includes a figure that compares the performance of various models on text representation (embedding) and generation tasks, showing that GRITLM is the first model to perform best-in-class at both types of tasks simultaneously.
-* The paper is a preprint and is currently under review.
-* The paper's arXiv ID is 2402.09906v1 [cs.CL], and it was published on 15 Feb 2024.
+* The unification via GRIT speeds up Retrieval-Augmented Generation (RAG) by > 60% for long documents.
+* The models, code, and other materials are available at <https://github.com/ContextualAI/gritlm>.
 
 ## Fast Model Editing at Scale
 
-![pdf](papers/mitchell2022fast/2110.11309.pdf)
+[Link to PDF](papers/mitchell2022fast/2110.11309.pdf)
 
  * The paper proposes a method for editing large pre-trained models to correct inaccurate outputs or update outdated information.
-* The proposed method, called Model Editor Networks with Gradient Decomposition (MEND), uses a single desired input-output pair to make fast, local edits to a pre-trained model's behavior.
+* The method, called Model Editor Networks with Gradient Decomposition (MEND), uses a collection of small auxiliary editing networks to make fast, local edits to a pre-trained model's behavior.
 * MEND learns to transform the gradient obtained by standard fine-tuning using a low-rank decomposition of the gradient to make the parameterization of this transformation tractable.
 * MEND can be trained on a single GPU in less than a day even for 10 billion+ parameter models and enables rapid application of new edits to the pre-trained model.
-* The authors compare MEND to other editing algorithms and find that it is the only approach that effectively edits the behavior of models with more than 10 billion parameters.
-* The authors test MEND on T5, GPT, BERT, and BART models and find that it is able to make targeted edits while preserving the model's performance on unrelated inputs.
-* The code and data for MEND are available at <https://sites.google.com/view/mend-editing>.
+* The experiments on T5, GPT, BERT, and BART models show that MEND is the only approach to model editing that effectively edits the behavior of models with more than 10 billion parameters.
+* The code and data are available at <https://sites.google.com/view/mend-editing>.
+
+## The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits
+
+[Link to PDF](papers/ma2024era/2402.17764.pdf)
+
+ * The paper introduces a 1-bit Large Language Model (LLM) variant, BitNet b1.58, where every parameter is ternary {-1, 0, 1}.
+* BitNet b1.5
 
 ## GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection
 
-![pdf](papers/zhao2024galore/2403.03507.pdf)
+[Link to PDF](papers/zhao2024galore/2403.03507.pdf)
 
- * Training Large Language Models (LLMs) is memory-intensive due to the growing size of weights and optimizer states.
-* Common memory-reduction approaches like low-rank adaptation (LoRA) add a trainable low-rank matrix to the frozen pre-trained weight in each layer, reducing trainable parameters and optimizer states.
-* However, LoRA and similar methods typically underperform training with full-rank weights in both pre-training and fine-tuning stages.
-* The authors propose Gradient Low-Rank Projection (GaLore), a memory-efficient training strategy that allows full-parameter learning while reducing memory usage.
-* GaLore reduces memory usage by up to 65.5% in optimizer states and maintains performance for pre-training on LLaMA 1B and 7B architectures with the C4 dataset.
-* The 8-bit GaLore further reduces optimizer memory by up to 82.5% and total training memory by 63.3%, compared to a BF16 baseline.
-* The authors demonstrate the feasibility of pre-training a 7B model on consumer GPUs with 24GB memory without model parallel, checkpointing, or offloading strategies.
-* GaLore is a PyTorch-like algorithm that projects gradients to a compact space, updates them, and then projects them back to the original space.
-* The authors show that GaLore outperforms other memory-reduction techniques like gradient checkpointing and activation offloading.
-* GaLore is a promising approach for memory-efficient LLM training, allowing for full-parameter learning and reducing memory usage.
+ * Training Large Language Models (LLMs) is memory-intensive, with optimizer states and gradients taking up more memory than the trainable parameters themselves.
+* Current memory-reduction methods, such as low-rank adaptation (LoRA), add a trainable low-rank matrix to the frozen pre-trained weight in each layer, reducing trainable parameters and optimizer states.
+* However, these methods typically underperform training with full-rank weights in both pre-training and fine-tuning stages, as they limit the parameter search to a low-rank subspace and alter the training dynamics.
+* The authors propose Gradient Low-Rank Projection (GaLore), a memory-efficient training strategy that allows full-parameter learning while reducing memory usage by up to 65.5% in optimizer states.
+* GaLore maintains both efficiency and performance for pre-training on LLaMA 1B and 7B architectures with the C4 dataset and fine-tuning RoBERTa on GLUE tasks.
+* The authors demonstrate, for the first time, the feasibility of pre-training a 7B model on consumer GPUs with 24GB memory without model parallel, checkpointing, or offloading strategies.
 
 ## sDPO: Don't Use Your Data All at Once
 
-![pdf](papers/kim2024sdpo/2403.19270.pdf)
+[Link to PDF](papers/kim2024sdpo/2403.19270.pdf)
 
  * The paper proposes sDPO, an extension of Direct Preference Optimization (DPO) for aligning large language models (LLMs) with human preferences.
+* sDPO involves dividing available preference datasets and utilizing them in a step-wise manner during DPO training, allowing for more precise alignment with reference models.
+* The authors demonstrate that sDPO results in a final model that is more performant than other LLMs with more parameters.
 * DPO involves curating preference datasets using human or strong AI judgement to select chosen and rejected responses to questions, and training LLMs by comparing log probabilities of chosen versus rejected answers.
-* The authors argue that the reference model used in DPO, which acts as a lower bound, is usually set as the base SFT model, which is a weaker alternative with potentially misaligned preferences.
-* The proposed sDPO trains the final model to be more performant by using the aligned model in the previous step as the reference model for the current step, resulting in a more aligned reference model.
-* The authors demonstrate that sDPO facilitates the use of more precisely aligned reference models within the DPO training framework.
-* The sDPO trained models outperform other popular LLMs with more parameters, as shown in Table 1 with H4 scores for Mistral-7B-OpenOrca and OpenHermes-2.5-Mistral-7B with different reference models.
-* The sDPO trained models perform better than the base SFT model, even when the base SFT model is already aligned, indicating that sDPO can improve the alignment of already aligned models.
-* The authors also show that sDPO can be used with different types of reference models, including open source models and models trained with different techniques.
-* The paper concludes that sDPO is a simple and effective method for aligning LLMs with human preferences, and can be used with different types of reference models.
+* However, obtaining these probabilities can be challenging with proprietary models, and the reference model is typically set as the base SFT model, which is a weaker alternative with potentially misaligned preferences.
+* sDPO addresses this issue by using the aligned model from the previous step as the reference model for the current step, resulting in a more aligned reference model and a more performant final model.
 
 ## Gecko: Versatile Text Embeddings Distilled from Large Language Models
 
-![pdf](papers/lee2024gecko/2403.20327.pdf)
+[Link to PDF](papers/lee2024gecko/2403.20327.pdf)
 
  * Gecko is a new text embedding model that is compact and versatile, achieving strong retrieval performance.
-* It distills knowledge from large language models (LLMs) into a retriever using a two-step distillation process.
+* It distills knowledge from large language models (LLMs) into a retriever using a two-step process.
 * The first step generates diverse, synthetic paired data using an LLM, and the second step refines the data quality by retrieving a set of candidate passages for each query and relabeling the positive and hard negative passages using the same LLM.
-* Gecko outperforms existing entries with 768 embedding size on the Massive Text Embedding Benchmark (MTEB) with 256 embedding dimensions.
-* Gecko with 768 embedding dimensions competes with 7x larger models and 5x higher dimensional embeddings.
-* Gecko's approach leverages insights from knowledge distillation to create a two-step LLM-powered embedding model.
-* It starts with a large corpus of (unlabeled) passages, uses a few-shot prompted LLM to generate a relevant task and query for each passage, and embeds the concatenated task and query using a pretrained embedding model.
-* It then reranks the passages using an LLM to obtain positive and negative passages based on the LLM scores.
-* The reranking step is key to enhance the quality as the best passage to answer the generated query often differs from the original source passage.
-* Using Gecko's LLM-based dataset, FRet, alone can lead to significant improvement, setting a strong baseline as a zero-shot embedding model on MTEB.
+* Gecko outperforms existing entries with 768 embedding size and competes with 7x larger models and 5x higher dimensional embeddings.
+* The authors show that using their LLM-based dataset, FRet, alone can lead to significant improvement, setting a strong baseline as a zero-shot embedding model on MTEB.
 
 ## Advancing LLM Reasoning Generalists with Preference Trees
 
-![pdf](papers/yuan2024advancing/2404.02078.pdf)
+[Link to PDF](papers/yuan2024advancing/2404.02078.pdf)
 
- * The paper introduces EURUS, a suite of large language models (LLMs) optimized for reasoning.
-* EURUS models are finetuned from Mistral-7B and CodeLlama-70B and achieve state-of-the-art results on a diverse set of benchmarks covering mathematics, code generation, and logical reasoning problems.
-* EURUS-70B beats GPT-3.5 Turbo in reasoning across 12 tests covering five tasks and achieves a 33.3% pass@1 accuracy on LeetCode and 32.6% on TheoremQA.
+ * The paper introduces EURUS, a suite of large language models (LLMs) optimized for reasoning, which achieve state-of-the-art results on a diverse set of benchmarks covering mathematics, code generation, and logical reasoning problems.
+* EURUS-70B beats GPT-3.5 Turbo in reasoning across five tasks and substantially outperforms existing open-source models on LeetCode and TheoremQA by margins more than 13.3%.
 * The strong performance of EURUS can be primarily attributed to ULTRAINTERACT, a newly-curated large-scale, high-quality alignment dataset specifically designed for complex reasoning tasks.
 * ULTRAINTERACT includes a preference tree consisting of reasoning chains, multi-turn interaction trajectories, and pairwise data to facilitate preference learning.
-* The investigation reveals that some well-established preference learning algorithms may be less suitable for reasoning tasks, and a novel reward modeling objective is derived.
-* The strong reward model, together with ULTRAINTERACT, leads to a significant improvement in the performance of EURUS on reasoning tasks.
-* The authors also release the EURUS models and ULTRAINTERACT dataset for research purposes.
+* The investigation reveals that some well-established preference learning algorithms may be less suitable for reasoning tasks, and a novel reward modeling objective is derived, leading to a strong reward model.
+
+## BitNet: Scaling 1-bit Transformers for Large Language Models
+
+[Link to PDF](papers/wang2023bitnet/2310.11453.pdf)
+
+ * The paper introduces BitNet, a scalable and stable 1-bit Transformer architecture for large language models.
+* BitNet uses a drop-in replacement called BitLinear for the nn.Linear layer to train 1-bit weights from scratch.
+* Experimental results show that BitNet achieves competitive performance while reducing memory footprint and energy consumption, compared to state-of-the-art 8-bit quantization methods and FP16 Transformer baselines.
+* BitNet exhibits a scaling law similar to full-precision Transformers, suggesting its potential for effective scaling to larger language models while maintaining efficiency and performance benefits.
+* BitNet trains 1-bit Transformers from scratch, significantly outperforming state-of-the-art quantization methods and achieving energy-efficient results.
+* The cost savings of BitNet become more significant as the model size scales up, while still achieving competitive performance with models trained with FP16.
 
 ## Simple and Scalable Strategies to Continually Pre-train Large Language Models
 
-![pdf](papers/ibrahim2024simple/2403.08763.pdf)
+[Link to PDF](papers/ibrahim2024simple/2403.08763.pdf)
 
- * Large language models (LLMs) are typically pre-trained on billions of tokens and then re-trained from scratch when new data becomes available.
-* Continual pre-training of LLMs can save significant compute compared to re-training, but it can result in degraded performance on previous data or poor adaptation to new data due to distribution shift.
-* The authors propose a simple and scalable combination of learning rate (LR) re-warming, LR re-decaying, and replay of previous data to match the performance of fully re-training from scratch on all available data.
-* The proposed method is shown to match the re-training baseline for a 405M parameter model on two commonly used LLM pre-training datasets (English→English) and a stronger distribution shift (English→German).
-* The method also matches the re-training baseline for a 10B parameter LLM on a weak but realistic distribution shift (English→English).
-* The authors propose alternatives to the cosine learning rate schedule to help circumvent forgetting induced by LR re-warming and that are not bound to a fixed token budget.
+ * Large language models (LLMs) are typically pre-trained on billions of tokens, and the process is repeated when new data becomes available.
+* Continual pre-training of LLMs is more efficient, but the distribution shift in new data can result in degraded performance on previous data or poor adaptation to new data.
+* The authors propose a simple and scalable combination of learning rate (LR) re-warming, LR re-decaying, and replay of previous data to match the performance of fully re-training from scratch.
+* The proposed method is shown to match the performance of re-training from scratch on two commonly used LLM pre-training datasets (English→English) and a stronger distribution shift (English→German) at the 405M parameter model scale.
+* The method also matches the re-training baseline for a 10B parameter LLM, demonstrating that LLMs can be successfully updated via simple and scalable continual learning strategies, using only a fraction of the compute.
+* The authors also propose alternatives to the cosine learning rate schedule to help circumvent forgetting induced by LR re-warming and that are not bound to a fixed token budget.
 
 ## ReFT: Representation Finetuning for Language Models
 
-![pdf](papers/wu2024reft/2404.03592.pdf)
+[Link to PDF](papers/wu2024reft/2404.03592.pdf)
 
- * Representation Finetuning (ReFT) is a new approach to adapting pretrained language models (LMs) to new tasks or domains, which involves learning task-specific interventions on hidden representations rather than updating model weights.
-* The authors propose a specific instance of the ReFT family, called Low-rank Linear Subspace ReFT (LoReFT), which is a drop-in replacement for existing parameter-efficient finetuning (PEFT) methods and learns interventions that are more parameter-efficient than prior state-of-the-art PEFTs.
+ * Representation Finetuning (ReFT) is a new approach to adapting pretrained language models to new tasks, which involves learning task-specific interventions on hidden representations instead of updating model weights.
+* The authors propose a specific instance of ReFT called Low-rank Linear Subspace ReFT (LoReFT), which is a drop-in replacement for existing parameter-efficient finetuning (PEFT) methods and learns interventions that are more parameter-efficient than prior state-of-the-art PEFTs.
 * LoReFT is evaluated on eight commonsense reasoning tasks, four arithmetic reasoning tasks, Alpaca-Eval v1.0, and GLUE, and is shown to deliver the best balance of efficiency and performance, outperforming state-of-the-art PEFTs in most cases.
 * The authors release a generic ReFT training library publicly at <https://github.com/stanfordnlp/pyreft>.
-* Current state-of-the-art PEFTs modify model weights, but interpretability work has shown that representations encode rich semantic information, suggesting that editing representations might be a more powerful alternative to weight updates.
-* ReFT methods operate on a frozen base model and learn task-specific interventions on hidden representations, reducing memory usage and training time while maintaining similar performance to full finetuning in many practical settings.
-* Adapters, a common family of PEFTs, learn an edit that can be added to a subset of model weights or an additional set of weights that operate alongside the frozen base model.
-* Recent adapters such as LoRA and DoRA use low-rank approximations in place of full weight matrices during adapter training, reducing the number of trainable parameters in learned weight updates.
-* QLoRA further shows that full-precision adapters can be trained on top of reduced-precision models without sacrificing performance.
-* Adapters are generally more efficient and effective than methods that introduce new model components, like prefix-tuning.
+* ReFT methods offer a promising alternative to traditional PEFT methods, as they can leverage the rich semantic information encoded in representations to achieve better performance with fewer trainable parameters.
 
 ## RAFT: Adapting Language Model to Domain Specific RAG
 
-![pdf](papers/zhang2024raft/2403.10131.pdf)
+[Link to PDF](papers/zhang2024raft/2403.10131.pdf)
 
- * Pretrained Large Language Models (LLMs) are commonly adapted to specific domains through finetuning or RAG-based prompting.
+ * Pretrained Large Language Models (LLMs) are commonly adapted to specific domains through RAG-based prompting or finetuning.
 * The optimal methodology for LLMs to gain new knowledge remains an open question.
 * The authors propose Retrieval Augmented Fine Tuning (RAFT), a training recipe that improves the model's ability to answer questions in an "open-book" in-domain setting.
 * RAFT trains the model to ignore irrelevant documents and cite verbatim the right sequence from the relevant document to answer the question.
 * RAFT consistently improves the model's performance in domain-specific RAG, outperforming existing methods in PubMed, HotpotQA, and Gorilla datasets.
-* RAFT's code and demo are open-sourced at <https://github.com/ShishirPatil/gorilla>.
+* The authors open-source the code and demo for RAFT at <https://github.com/ShishirPatil/gorilla>.
 
 ## Reinforced Self-Training (ReST) for Language Modeling
 
-![pdf](papers/gulcehre2023reinforced/2308.08998.pdf)
+[Link to PDF](papers/gulcehre2023reinforced/2308.08998.pdf)
 
  * The paper proposes Reinforced Self-Training (ReST), a simple algorithm for aligning large language models (LLMs) with human preferences using reinforcement learning from human feedback (RLHF).
 * ReST is inspired by growing batch reinforcement learning and is more efficient than typical online RLHF methods because it produces the training dataset offline, allowing data reuse.
-* The ReST method consists of two steps: Grow and Improve. During the Grow step, a policy generates a dataset, and at the Improve step, the filtered dataset is used to fine-tune the policy.
-* The authors focus on the application of ReST to machine translation and show that it can substantially improve translation quality, as measured by automated metrics and human evaluation.
-* ReST is a general approach applicable to all generative learning settings, and the authors believe it can be used to improve the quality of LLMs' outputs in various tasks.
-* The paper highlights the importance of aligning LLMs with human preferences to avoid generating unsafe or harmful contents and to improve performance on downstream tasks.
-* The authors also discuss the limitations of ReST, such as the need for a high-quality initial policy and the potential for the reward model to overfit to the human feedback.
-* The paper includes experiments and results that demonstrate the effectiveness of ReST in improving the translation quality of LLMs in a compute and sample-efficient manner.
-* The authors suggest that ReST can be further improved by incorporating active learning techniques and by exploring different ways of generating the initial policy.
-* The paper is a contribution of researchers from Google DeepMind and Google Research.
+* The paper focuses on the application of ReST to machine translation and shows that it can substantially improve translation quality, as measured by automated metrics and human evaluation.
+* ReST consists of two steps: Grow, where a policy generates a dataset, and Improve, where the filtered dataset is used to fine-tune the policy. These steps are repeated, with Improve step repeated more frequently to amortize the dataset creation cost.
+* The authors demonstrate that ReST can align LLMs with human preferences, improving their performance on downstream tasks and reducing the risk of generating unsafe or harmful content.
+* ReST is a general approach applicable to all generative learning settings, and the authors suggest that it could be used to improve the performance of LLMs in other domains.
 
 ## OpenMathInstruct-1: A 1.8 Million Math Instruction Tuning Dataset
 
-![pdf](papers/toshniwal2024openmathinstruct1/2402.10176.pdf)
+[Link to PDF](papers/toshniwal2024openmathinstruct1/2402.10176.pdf)
 
- * The paper introduces OpenMathInstruct-1, a dataset of 1.8 million math problem-solution pairs generated using the open-source Mixtral model.
-* The dataset is used to train a model called OpenMath-CodeLlama-70B, which achieves competitive scores on the GSM8K and MATH benchmarks.
-* The authors argue that the use of open-source models for generating math instruction tuning datasets has been limited due to the wide gap in mathematical skills between closed-source and open-source LLMs.
-* The paper aims to address this gap by using a novel prompting strategy and scaling techniques to generate high-quality synthetic data.
-* The authors compare the performance of Mixtral with GPT-4, currently one of the best closed-source LLMs for mathematical reasoning, and find that Mixtral performs well but still lags behind GPT-4.
-* The OpenMathInstruct-1 dataset, code, and models are released under a commercially permissive license.
-* The paper highlights the limitations of using proprietary models like GPT-4 for model development, including legal restraints, cost, and lack of reproducibility.
-* The authors argue that open-source models like Mixtral can provide a viable alternative for developing mathematical reasoning models, with the potential to overcome these limitations.
+ * The paper introduces OpenMathInstruct-1, a new math instruction tuning dataset with 1.8 million problem-solution pairs.
+* The dataset is constructed by synthesizing code-interpreter solutions for GSM8K and MATH benchmarks using the Mixtral model.
+* The authors compare the mathematical skills of the best closed-source LLMs, such as GPT-4, and the best open-source LLMs and find a wide gap.
+* They propose a prompting novelty and scaling to construct the OpenMathInstruct-1 dataset, which is released under a commercially permissive license.
+* The best model, OpenMath-CodeLlama-70B, trained on a subset of OpenMathInstruct-1, achieves a score of 84.6% on GSM8K and 50.7% on MATH, which is competitive with the best gpt-distilled models.
+* The paper highlights the limitations of using proprietary models like GPT-4 for mathematical reasoning model development, such as legal restraints, cost, and lack of reproducibility.
 
 ## Instruction-tuned Language Models are Better Knowledge Learners
 
-![pdf](papers/jiang2024instructiontuned/2402.12847.pdf)
+[Link to PDF](papers/jiang2024instructiontuned/2402.12847.pdf)
 
  * Large language models (LLMs) store factual knowledge in their parameters through pre-training, but this knowledge can become outdated or insufficient over time.
 * Continued pre-training on new documents can help keep LLMs up-to-date, and instruction-tuning can make it easier to elicit this knowledge.
 * However, even with minimized perplexity, the amount of elicited knowledge is still limited, a phenomenon referred to as the "perplexity curse."
-* The authors propose pre-instruction-tuning (PIT), a method that instruction-tunes on questions before training on documents, to mitigate the perplexity curse.
+* The paper proposes pre-instruction-tuning (PIT), a method that instruction-tunes on questions prior to training on documents, to mitigate the perplexity curse.
 * PIT significantly enhances the ability of LLMs to absorb knowledge from new documents, outperforming standard instruction-tuning by 17.8%.
 
 ## Recurrent Drafter for Fast Speculative Decoding in Large Language Models
 
-![pdf](papers/zhang2024recurrent/2403.09919.pdf)
+[Link to PDF](papers/zhang2024recurrent/2403.09919.pdf)
 
  * The paper proposes an improved approach for speculative decoding to enhance the efficiency of serving large language models (LLMs).
-* The approach combines the strengths of the classic two-model speculative decoding and the single-model approach, Medusa.
-* It uses a single-model strategy with a lightweight draft head that has a recurrent dependency design, similar to the small draft model in classic speculative decoding.
-* The recurrent dependency allows for swift filtering of undesired candidates using beam search, avoiding the need for a data-dependent tree attention structure during inference as in Medusa.
-* The proposed method is empirically demonstrated to be effective on several popular open-source LLMs, with a comprehensive analysis of trade-offs involved.
-* LLMs are large models with billions of parameters, using auto-regressive methods for token-by-token responses, which can be slow due to memory bandwidth constraints and large model size.
-* Speculative decoding has emerged as a promising strategy to accelerate LLM inference, using a smaller draft model to generate preliminary candidate tokens and a larger target model for verification.
-* The single-model approach, as in Medusa, is preferred for easier integration into existing LLM serving systems.
-* The proposed method simplifies the single-model design while avoiding the complexities of the full transformer architecture and the need for a data-dependent tree attention structure.
+* The method combines the strengths of the classic two-model speculative decoding approach and the single-model approach, Medusa.
+* It uses a single-model strategy with a lightweight draft head that has a recurrent dependency design, similar to the small draft model in classic speculative decoding but without the complexities of the full transformer architecture.
+* The recurrent dependency allows for swift filtering of undesired candidates using beam search, resulting in a method that is simple in design and avoids creating a data-dependent tree attention structure only for inference, as in Medusa.
+* The proposed method is empirically demonstrated to be effective on several popular open-source language models, with a comprehensive analysis of trade-offs involved in adoption.
+* Large language models use auto-regressive methods to generate token-by-token responses, and the latency of the single token generation step significantly increases with model size.
+* Speculative decoding has emerged as a promising strategy to accelerate LLM inference, using a smaller draft model to generate preliminary candidate tokens more efficiently, followed by verification by the larger target model.
+* The single-model approach, as exemplified by Medusa, holds promise for easier integration into existing LLM serving systems.
 
 ## Branch-Train-MiX: Mixing Expert LLMs into a Mixture-of-Experts LLM
 
-![pdf](papers/sukhbaatar2024branchtrainmix/2403.07816.pdf)
+[Link to PDF](papers/sukhbaatar2024branchtrainmix/2403.07816.pdf)
 
- * The paper proposes Branch-Train-MiX (BTX), a method for training Large Language Models (LLMs) that can specialize in multiple domains such as coding, math, and world knowledge.
+ * The paper proposes Branch-Train-MiX (BTX), a method for training Large Language Models (LLMs) that can specialize in multiple domains such as coding, math reasoning, and world knowledge.
 * BTX starts by branching a seed model to train experts in parallel with high throughput and reduced communication cost.
-* After individual experts are trained, BTX combines their feedforward parameters as experts in Mixture-of-Expert (MoE) layers and averages the remaining parameters.
-* BTX then finetunes the MoE layers to learn token-level routing, which is not present in the Branch-Train-Merge method.
-* BTX generalizes two special cases, the Branch-Train-Merge method and sparse upcycling, which omits the stage of training experts asynchronously.
-* BTX achieves the best accuracy-efficiency tradeoff compared to alternative approaches.
-* Recent work has proposed the Branch-Train-Merge (BTM) method for embarrassingly parallel training of LLMs without synchronization, but its main drawback is the lack of a unified single model for further finetuning.
-* The Mixture-of-Experts (MoE) approach reduces the computational footprint of LLMs by keeping only a subset of parameters active at any given time, allowing the total number of parameters to grow without additional computation.
-* MoE has shown impressive performance on downstream tasks, but it is often trained in a fully synchronized manner.
-* BTX combines the benefits of both BTM and MoE, allowing for efficient and effective training of LLMs that can specialize in multiple domains while still being finetuned for specific tasks.
+* After individual experts are trained, BTX combines their feedforward parameters as experts in Mixture-of-Expert (MoE) layers and averages the remaining parameters, followed by an MoE-finetuning stage to learn token-level routing.
+* BTX generalizes two special cases, the Branch-Train-Merge method and sparse upcycling.
+* Compared to alternative approaches, BTX achieves the best accuracy-efficiency tradeoff.
+* BTX allows for further supervised finetuning and reinforcement learning from human feedback, unlike the Branch-Train-Merge method.
+* The Mixture-of-Experts approach is used to reduce the computational footprint of LLMs, allowing the total number of parameters to grow without additional computation.
 
 ## InternLM2 Technical Report
 
-![pdf](papers/cai2024internlm2/2403.17297.pdf)
+[Link to PDF](papers/cai2024internlm2/2403.17297.pdf)
 
  * The paper introduces InternLM2, an open-source Large Language Model (LLM) that outperforms previous models in comprehensive evaluations across 6 dimensions and 30 benchmarks.
-* InternLM2 is trained on diverse data types, including text, code, and long-context data, and efficiently captures long-term dependencies.
-* The model is initially trained on 4k tokens before advancing to 32k tokens in pre-training and fine-tuning stages, exhibiting remarkable performance on the 200k "Needle-in-a-Haystack" test.
-* InternLM2 is aligned using Supervised Fine-Tuning (SFT) and a novel Conditional Online Reinforcement Learning from Human Feedback (COOL RLHF) strategy that addresses conflicting human preferences and reward hacking.
-* The authors release InternLM2 models in different training stages and model sizes to provide the community with insights into the model's evolution.
-* The paper aims to replicate the advancements of closed-source LLMs like ChatGPT and GPT-4 in open-source models.
-* The pre-training process of InternLM2 is detailed, highlighting the preparation of diverse data types and the use of innovative pre-training and optimization techniques.
-* The model is evaluated on long-context modeling and open-ended subjective evaluations, showing superior performance compared to previous models.
-* The authors address the challenges of replicating advancements in open-source models and aim to provide a more transparent and accessible approach to LLM development.
+* InternLM2 is trained using innovative pre-training and optimization techniques, with a meticulous pre-training process that includes the preparation of diverse data types such as text, code, and long-context data.
+* The model efficiently captures long-term dependencies, initially trained on 4k tokens before advancing to 32k tokens in pre-training and fine-tuning stages, exhibiting remarkable performance on the 200k "Needle-in-a-Haystack" test.
+* InternLM2 is further aligned using Supervised Fine-Tuning (SFT) and a novel Conditional Online Reinforcement Learning from Human Feedback (COOL RLHF) strategy that addresses conflicting human preferences and reward hacking.
+* The authors release InternLM2 models in different training stages and model sizes, providing the community with insights into the model’s evolution.
 

@@ -32,7 +32,7 @@ def main():
             summary = open(os.path.dirname(file) + '/summary.txt').read()
             if title and pdf_path and summary:
                 writer.write(f'## {title}\n\n')
-                writer.write(f'![pdf]({pdf_path})\n\n')
+                writer.write(f'[Link to PDF]({pdf_path})\n\n')
                 writer.write(f'{summary}\n\n')
 
     writer.close()

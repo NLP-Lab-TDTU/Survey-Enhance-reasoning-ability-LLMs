@@ -1,5 +1,5 @@
  * Large language models (LLMs) store factual knowledge in their parameters through pre-training, but this knowledge can become outdated or insufficient over time.
 * Continued pre-training on new documents can help keep LLMs up-to-date, and instruction-tuning can make it easier to elicit this knowledge.
 * However, even with minimized perplexity, the amount of elicited knowledge is still limited, a phenomenon referred to as the "perplexity curse."
-* The authors propose pre-instruction-tuning (PIT), a method that instruction-tunes on questions before training on documents, to mitigate the perplexity curse.
+* The paper proposes pre-instruction-tuning (PIT), a method that instruction-tunes on questions prior to training on documents, to mitigate the perplexity curse.
 * PIT significantly enhances the ability of LLMs to absorb knowledge from new documents, outperforming standard instruction-tuning by 17.8%.

@@ -1,8 +1,5 @@
- * The paper introduces EURUS, a suite of large language models (LLMs) optimized for reasoning.
-* EURUS models are finetuned from Mistral-7B and CodeLlama-70B and achieve state-of-the-art results on a diverse set of benchmarks covering mathematics, code generation, and logical reasoning problems.
-* EURUS-70B beats GPT-3.5 Turbo in reasoning across 12 tests covering five tasks and achieves a 33.3% pass@1 accuracy on LeetCode and 32.6% on TheoremQA.
+ * The paper introduces EURUS, a suite of large language models (LLMs) optimized for reasoning, which achieve state-of-the-art results on a diverse set of benchmarks covering mathematics, code generation, and logical reasoning problems.
+* EURUS-70B beats GPT-3.5 Turbo in reasoning across five tasks and substantially outperforms existing open-source models on LeetCode and TheoremQA by margins more than 13.3%.
 * The strong performance of EURUS can be primarily attributed to ULTRAINTERACT, a newly-curated large-scale, high-quality alignment dataset specifically designed for complex reasoning tasks.
 * ULTRAINTERACT includes a preference tree consisting of reasoning chains, multi-turn interaction trajectories, and pairwise data to facilitate preference learning.
-* The investigation reveals that some well-established preference learning algorithms may be less suitable for reasoning tasks, and a novel reward modeling objective is derived.
-* The strong reward model, together with ULTRAINTERACT, leads to a significant improvement in the performance of EURUS on reasoning tasks.
-* The authors also release the EURUS models and ULTRAINTERACT dataset for research purposes.
+* The investigation reveals that some well-established preference learning algorithms may be less suitable for reasoning tasks, and a novel reward modeling objective is derived, leading to a strong reward model.

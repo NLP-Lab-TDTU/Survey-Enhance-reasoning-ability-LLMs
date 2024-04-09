@@ -1,10 +1,7 @@
- * The paper proposes Branch-Train-MiX (BTX), a method for training Large Language Models (LLMs) that can specialize in multiple domains such as coding, math, and world knowledge.
+ * The paper proposes Branch-Train-MiX (BTX), a method for training Large Language Models (LLMs) that can specialize in multiple domains such as coding, math reasoning, and world knowledge.
 * BTX starts by branching a seed model to train experts in parallel with high throughput and reduced communication cost.
-* After individual experts are trained, BTX combines their feedforward parameters as experts in Mixture-of-Expert (MoE) layers and averages the remaining parameters.
-* BTX then finetunes the MoE layers to learn token-level routing, which is not present in the Branch-Train-Merge method.
-* BTX generalizes two special cases, the Branch-Train-Merge method and sparse upcycling, which omits the stage of training experts asynchronously.
-* BTX achieves the best accuracy-efficiency tradeoff compared to alternative approaches.
-* Recent work has proposed the Branch-Train-Merge (BTM) method for embarrassingly parallel training of LLMs without synchronization, but its main drawback is the lack of a unified single model for further finetuning.
-* The Mixture-of-Experts (MoE) approach reduces the computational footprint of LLMs by keeping only a subset of parameters active at any given time, allowing the total number of parameters to grow without additional computation.
-* MoE has shown impressive performance on downstream tasks, but it is often trained in a fully synchronized manner.
-* BTX combines the benefits of both BTM and MoE, allowing for efficient and effective training of LLMs that can specialize in multiple domains while still being finetuned for specific tasks.
+* After individual experts are trained, BTX combines their feedforward parameters as experts in Mixture-of-Expert (MoE) layers and averages the remaining parameters, followed by an MoE-finetuning stage to learn token-level routing.
+* BTX generalizes two special cases, the Branch-Train-Merge method and sparse upcycling.
+* Compared to alternative approaches, BTX achieves the best accuracy-efficiency tradeoff.
+* BTX allows for further supervised finetuning and reinforcement learning from human feedback, unlike the Branch-Train-Merge method.
+* The Mixture-of-Experts approach is used to reduce the computational footprint of LLMs, allowing the total number of parameters to grow without additional computation.

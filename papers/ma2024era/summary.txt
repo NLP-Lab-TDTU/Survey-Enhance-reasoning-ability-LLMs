@@ -1,0 +1,2 @@
+ * The paper introduces a 1-bit Large Language Model (LLM) variant, BitNet b1.58, where every parameter is ternary {-1, 0, 1}.
+* BitNet b1.5

@@ -1,8 +1,6 @@
- * The paper introduces OpenMathInstruct-1, a dataset of 1.8 million math problem-solution pairs generated using the open-source Mixtral model.
-* The dataset is used to train a model called OpenMath-CodeLlama-70B, which achieves competitive scores on the GSM8K and MATH benchmarks.
-* The authors argue that the use of open-source models for generating math instruction tuning datasets has been limited due to the wide gap in mathematical skills between closed-source and open-source LLMs.
-* The paper aims to address this gap by using a novel prompting strategy and scaling techniques to generate high-quality synthetic data.
-* The authors compare the performance of Mixtral with GPT-4, currently one of the best closed-source LLMs for mathematical reasoning, and find that Mixtral performs well but still lags behind GPT-4.
-* The OpenMathInstruct-1 dataset, code, and models are released under a commercially permissive license.
-* The paper highlights the limitations of using proprietary models like GPT-4 for model development, including legal restraints, cost, and lack of reproducibility.
-* The authors argue that open-source models like Mixtral can provide a viable alternative for developing mathematical reasoning models, with the potential to overcome these limitations.
+ * The paper introduces OpenMathInstruct-1, a new math instruction tuning dataset with 1.8 million problem-solution pairs.
+* The dataset is constructed by synthesizing code-interpreter solutions for GSM8K and MATH benchmarks using the Mixtral model.
+* The authors compare the mathematical skills of the best closed-source LLMs, such as GPT-4, and the best open-source LLMs and find a wide gap.
+* They propose a prompting novelty and scaling to construct the OpenMathInstruct-1 dataset, which is released under a commercially permissive license.
+* The best model, OpenMath-CodeLlama-70B, trained on a subset of OpenMathInstruct-1, achieves a score of 84.6% on GSM8K and 50.7% on MATH, which is competitive with the best gpt-distilled models.
+* The paper highlights the limitations of using proprietary models like GPT-4 for mathematical reasoning model development, such as legal restraints, cost, and lack of reproducibility.

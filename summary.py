@@ -20,7 +20,7 @@ def create_summary(pdf_file):
     if os.path.exists(os.path.dirname(pdf_file) + '/summary.txt'):
         return
     text = get_text_first_page(pdf_file)
-    chat = [{"role": "user", "content": "Summary of the paper in 5-10 bullet sentences.\n\n" + text}]
+    chat = [{"role": "user", "content": "Summary of the paper in 3-6 bullet sentences.\n\n" + text}]
     prompt = tokenizer.apply_chat_template(chat, tokenize=False)
     summary = client.text_generation(prompt, max_new_tokens=512)
     open(os.path.dirname(pdf_file) + '/summary.txt', 'w').write(summary)

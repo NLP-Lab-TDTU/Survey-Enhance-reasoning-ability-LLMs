@@ -1,10 +1,6 @@
  * The paper proposes Reinforced Self-Training (ReST), a simple algorithm for aligning large language models (LLMs) with human preferences using reinforcement learning from human feedback (RLHF).
 * ReST is inspired by growing batch reinforcement learning and is more efficient than typical online RLHF methods because it produces the training dataset offline, allowing data reuse.
-* The ReST method consists of two steps: Grow and Improve. During the Grow step, a policy generates a dataset, and at the Improve step, the filtered dataset is used to fine-tune the policy.
-* The authors focus on the application of ReST to machine translation and show that it can substantially improve translation quality, as measured by automated metrics and human evaluation.
-* ReST is a general approach applicable to all generative learning settings, and the authors believe it can be used to improve the quality of LLMs' outputs in various tasks.
-* The paper highlights the importance of aligning LLMs with human preferences to avoid generating unsafe or harmful contents and to improve performance on downstream tasks.
-* The authors also discuss the limitations of ReST, such as the need for a high-quality initial policy and the potential for the reward model to overfit to the human feedback.
-* The paper includes experiments and results that demonstrate the effectiveness of ReST in improving the translation quality of LLMs in a compute and sample-efficient manner.
-* The authors suggest that ReST can be further improved by incorporating active learning techniques and by exploring different ways of generating the initial policy.
-* The paper is a contribution of researchers from Google DeepMind and Google Research.
+* The paper focuses on the application of ReST to machine translation and shows that it can substantially improve translation quality, as measured by automated metrics and human evaluation.
+* ReST consists of two steps: Grow, where a policy generates a dataset, and Improve, where the filtered dataset is used to fine-tune the policy. These steps are repeated, with Improve step repeated more frequently to amortize the dataset creation cost.
+* The authors demonstrate that ReST can align LLMs with human preferences, improving their performance on downstream tasks and reducing the risk of generating unsafe or harmful content.
+* ReST is a general approach applicable to all generative learning settings, and the authors suggest that it could be used to improve the performance of LLMs in other domains.

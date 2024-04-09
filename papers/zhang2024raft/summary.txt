@@ -1,6 +1,6 @@
- * Pretrained Large Language Models (LLMs) are commonly adapted to specific domains through finetuning or RAG-based prompting.
+ * Pretrained Large Language Models (LLMs) are commonly adapted to specific domains through RAG-based prompting or finetuning.
 * The optimal methodology for LLMs to gain new knowledge remains an open question.
 * The authors propose Retrieval Augmented Fine Tuning (RAFT), a training recipe that improves the model's ability to answer questions in an "open-book" in-domain setting.
 * RAFT trains the model to ignore irrelevant documents and cite verbatim the right sequence from the relevant document to answer the question.
 * RAFT consistently improves the model's performance in domain-specific RAG, outperforming existing methods in PubMed, HotpotQA, and Gorilla datasets.
-* RAFT's code and demo are open-sourced at <https://github.com/ShishirPatil/gorilla>.
+* The authors open-source the code and demo for RAFT at <https://github.com/ShishirPatil/gorilla>.
